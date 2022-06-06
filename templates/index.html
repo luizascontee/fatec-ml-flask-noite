@@ -1,13 +1,50 @@
 <!DOCTYPE html>
-<head>
-    <title>Machine Learning</title>
-</head>
-<body>
+    <head>
+        <title>HR Analytics: Employee Promotion Data</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <body>
 
-    <form action="predicao" method="POST">
-        <input type="text" name="comentario"/>
-        <button>Enviar</button>
-    </form>
+        <form action="predicao" method="POST">
+            <input type="text" name="age" />
 
-</body>
+            <input type="text" name="length_of_service" />
+
+            <input type="text" name="awards_won" />
+
+            <input type="text" name="avg_training_score" />
+
+            <select name="department">
+            <option value="0">HR</option>
+            <option value="1">Finance</option>
+            <option value="2">Analytics</option>
+            <option value="3">Legal</option>
+            <option value="4">Sales & Marketing</option>
+            <option value="5">Technology</option>
+            <option value="6">Procurement</option>
+            <option value="7">Operations</option>
+            <option value="8">R&D</option>
+            </select>
+
+            <input type="number" name="region" min="0" max="33" />
+
+            <select name="previous_year_rating">
+            <option value="0">1.0</option>
+            <option value="1">2.0</option>
+            <option value="2">3.0</option>
+            <option value="3">4.0</option>
+            <option value="4">5.0</option>
+            </select>
+
+            <select name="education">
+            <option value="0">Below Secondary</option>
+            <option value="1">Master's & above</option>
+            <option value="2">Bachelor's</option>
+            </select>
+
+            <button type="submit" >Enviar</button>
+        </form>
+
+    </body>
 </html>
