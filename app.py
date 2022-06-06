@@ -18,10 +18,13 @@ def predicao():
   avg_training_score = request.form['avg_training_score']
   department = request.form['department']
   region = request.form['region']
-  comentario = request.form['previous_year_rating']
+  previous_year_rating = request.form['previous_year_rating']
   education = request.form['education']
 
-  predicao = model.predict([age, length_of_service, awards_won, avg_training_score, department, region, comentario, education])
+  array=[[str(age), str(length_of_service), str(awards_won), str(avg_training_score), str(department), str(region), str(previous_year_rating), str(education)]]
+
+  predicao = model.predict(array)
+
   return render_template('resposta.html', predicao=predicao[0])
 
 app.run(debug=True)
