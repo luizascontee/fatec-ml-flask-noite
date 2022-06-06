@@ -1,13 +1,34 @@
 
 <!DOCTYPE html>
     <head>
-        <title>Resposta</title>
+        <title>HR Analytics: Employee Promotion Data</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </head>
     <body>
-        {% if predicao == 1 %}
-            <div style="color: blue">Candidato promovido</div>
-        {% else %}
-            <div style="color: red">Candidato não promovido</div>
-        {% endif %}
+
+        <div class="p-3 bg-image" style="background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');height: 200px;"></div>
+
+        <div class="card mx-4 mx-md-5 shadow-4-strong" 
+            style="margin-top: -100px;
+                background: hsla(0, 0%, 100%, 0.8);
+                backdrop-filter: blur(30px);">
+            <div class="card-body py-4 px-md-4">
+
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold mb-5">HR Analytics: Employee Promotion</h2>
+                        <div>
+                            {% if predicao == 1 %}
+                            <div style="color: blue">Candidato promovido</div>
+                            {% else %}
+                                <div style="color: red">Candidato não promovido</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>
